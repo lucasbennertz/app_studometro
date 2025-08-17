@@ -6,7 +6,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color(0xFF1E1E1E),
+          secondary: Color(0xFF555855),
+          primary: Color(0xFF1E1E1E)
+        ),
+      ),
       home: MainScreen(),
       );
   }

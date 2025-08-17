@@ -10,7 +10,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
         centerTitle: true,
-        backgroundColor: Color(0xFF555855),
+        backgroundColor: Theme.of(context).colorScheme.secondary,
         title: Text(
           'Vão Estudar!',
           style: TextStyle(

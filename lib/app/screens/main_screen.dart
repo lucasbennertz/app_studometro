@@ -9,14 +9,14 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1E1E1E),
+      backgroundColor: Theme.of(context).colorScheme.primary,
       appBar: MyAppBar(),
       body: Column(
         children: [
           NotificationWidget(),
           SizedBox(height: 100),
           Container(
-            color: Color(0xFF555855),
+            color: Theme.of(context).colorScheme.secondary,
             width: double.infinity,
             height: MediaQuery.of(context).size.height * 0.001,
           ),
