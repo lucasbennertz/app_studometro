@@ -1,0 +1,12 @@
+import 'package:flutter/material.dart';
+
+class InputText extends StatelessWidget {
+  const InputText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      
+    );
+  }
+}
