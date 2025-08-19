@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vao_estudar/app/screens/main_screen.dart';
+import 'package:vao_estudar/app/screens/settings_screen.dart';
+import 'package:vao_estudar/app/utils/routes_class.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -15,6 +17,9 @@ class MainApp extends StatelessWidget {
         ),
       ),
       home: MainScreen(),
+      routes: {
+        RoutesClass.telaConfiguracoes : (context) => SettingsScreen(),
+      },
       );
   }
 }

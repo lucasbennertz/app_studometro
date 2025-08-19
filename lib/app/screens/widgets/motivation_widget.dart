@@ -22,7 +22,6 @@ class MotivationWidget extends StatelessWidget {
 
       return "Frase não encontrada";
     } catch (e) {
-      print("Erro ao carregar frase: $e");
       return "Erro ao carregar motivação";
     }
   }
