@@ -23,7 +23,7 @@ class NotificationWidget extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
                 fontSize: MediaQuery.of(context).size.width * 0.20,
-            ))
+            ),),
           // Add more notification items here
         ],
       ),

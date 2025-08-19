@@ -38,7 +38,7 @@ class MotivationWidget extends StatelessWidget {
 
         if (snapshot.hasError) {
           return const Text("Erro ao carregar frase",
-              style: TextStyle(color: Colors.red));
+              style: TextStyle(color: Colors.red),);
         }
 
         return Container(

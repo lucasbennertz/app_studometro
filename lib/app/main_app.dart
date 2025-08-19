@@ -11,7 +11,7 @@ class MainApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: Color(0xFF1E1E1E),
           secondary: Color(0xFF555855),
-          primary: Color(0xFF1E1E1E)
+          primary: Color(0xFF1E1E1E),
         ),
       ),
       home: MainScreen(),
