@@ -24,7 +24,7 @@ class _InputTextState extends State<InputText> {
           decoration: InputDecoration(
             border: OutlineInputBorder(),
             label: Text(
-              "Insira o número desejado de notificações", 
+              "Insira um número", 
               style: textoEstilizado,
               ),
             hintText: "EX:2",

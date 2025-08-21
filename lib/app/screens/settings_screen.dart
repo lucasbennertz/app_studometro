@@ -13,8 +13,15 @@ class SettingsScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text("Insira o número desejado de notificações:",
+             style: TextStyle(
+              color: Theme.of(context).colorScheme.tertiary,
+              fontSize: MediaQuery.sizeOf(context).width * 0.04,
+             ),
+             ),
+             SizedBox(height: 16,),
             InputText(),
           ],
         ),

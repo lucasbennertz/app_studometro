@@ -9,7 +9,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    _podeVoltar(){
+    podeVoltar(){
       return Navigator.canPop(context);
     }
     return AppBar(
@@ -24,11 +24,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
         leading: IconButton(
-          icon: !_podeVoltar() ? Icon(Icons.settings) : Icon(Icons.arrow_back),
+          icon: !podeVoltar() ? Icon(Icons.settings) : Icon(Icons.arrow_back),
           onPressed: () => {
-            _podeVoltar() ?
+            podeVoltar() ?
             Navigator.pop(context) : 
-            Navigator.pushNamed(context, RoutesClass.telaConfiguracoes)
+            Navigator.pushNamed(context, RoutesClass.telaConfiguracoes),
             
           },
         ),
