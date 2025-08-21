@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vao_estudar/app/screens/widgets/input_text.dart';
 import 'package:vao_estudar/app/screens/widgets/my_app_bar.dart';
+import 'package:vao_estudar/app/screens/widgets/save_button.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -13,7 +14,8 @@ class SettingsScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text("Insira o número desejado de notificações:",
              style: TextStyle(
@@ -23,6 +25,7 @@ class SettingsScreen extends StatelessWidget {
              ),
              SizedBox(height: 16,),
             InputText(),
+            SaveButton(),
           ],
         ),
       ),

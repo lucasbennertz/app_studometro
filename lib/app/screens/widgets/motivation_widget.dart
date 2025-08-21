@@ -63,6 +63,7 @@ class MotivationWidget extends StatelessWidget {
                       color: Colors.white70,
                       fontSize: 20.0,
                     ),
+                    softWrap: true,
                   ),
                 ),
               ),
