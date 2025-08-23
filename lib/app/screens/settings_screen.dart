@@ -8,25 +8,36 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _formKey = GlobalKey<FormState>();
+
+    void _validar(){
+      if(_formKey.currentState!.validate()){
+        _formKey.currentState!.save();
+      }
+    }
+
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       appBar: MyAppBar(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text("Insira o número desejado de notificações:",
-             style: TextStyle(
-              color: Theme.of(context).colorScheme.tertiary,
-              fontSize: MediaQuery.sizeOf(context).width * 0.04,
-             ),
-             ),
-             SizedBox(height: 16,),
-            InputText(),
-            SaveButton(),
-          ],
+        child: Form(
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text("Insira o número desejado de notificações:",
+               style: TextStyle(
+                color: Theme.of(context).colorScheme.tertiary,
+                fontSize: MediaQuery.sizeOf(context).width * 0.04,
+               ),
+               ),
+               SizedBox(height: 16,),
+              InputText(),
+              SaveButton(funcao: _validar),
+            ],
+          ),
         ),
       ),
     );
