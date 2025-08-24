@@ -8,11 +8,11 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
 
-    void _validar(){
-      if(_formKey.currentState!.validate()){
-        _formKey.currentState!.save();
+    void validar(){
+      if(formKey.currentState!.validate()){
+        formKey.currentState!.save();
       }
     }
 
@@ -22,7 +22,7 @@ class SettingsScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
-          key: _formKey,
+          key: formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -35,7 +35,7 @@ class SettingsScreen extends StatelessWidget {
                ),
                SizedBox(height: 16,),
               InputText(),
-              SaveButton(funcao: _validar),
+              SaveButton(funcao: validar),
             ],
           ),
         ),
